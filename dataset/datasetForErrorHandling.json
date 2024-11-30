@@ -1,0 +1,27 @@
+{
+	"name": "datasetForErrorHandling",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "error_@{formatDateTime(utcnow(), 'yyyyMMdd_HHmmss')}.json",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@{pipeline().Pipeline}Logs/@{formatDateTime(utcnow(), 'yyyy-MM-dd')}",
+					"type": "Expression"
+				},
+				"fileSystem": "error-logs"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

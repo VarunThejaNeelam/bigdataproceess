@@ -1,0 +1,9 @@
+{
+	"name": "adfetlprocess",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f15f10f3-d0ad-4ba9-80dc-53903afe05b4",
+		"tenantId": "b53c9692-2c72-4d25-8d97-f29f73dfd6e1"
+	}
+}
