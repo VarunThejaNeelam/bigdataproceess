@@ -1,0 +1,28 @@
+{
+	"name": "linkedServiceforonpremise",
+	"properties": {
+		"annotations": [],
+		"type": "MySql",
+		"typeProperties": {
+			"server": "localhost",
+			"port": 3306,
+			"database": "MySql",
+			"username": "root",
+			"sslMode": 1,
+			"useSystemTrustStore": 0,
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "mysqlpassword"
+			},
+			"driverVersion": "v2"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeforexternalserver",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
