@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntimeforexternalserver",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
